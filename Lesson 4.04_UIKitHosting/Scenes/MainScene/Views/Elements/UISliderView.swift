@@ -18,7 +18,7 @@ struct UISliderView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UISlider, context: Context) {
-        
+        ///
     }
     
 }
