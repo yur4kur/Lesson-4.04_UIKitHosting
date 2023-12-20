@@ -11,15 +11,33 @@ import SwiftUI
 
 struct MainView: View {
     
+    @State private var target = 97
     
     // MARK: - Body
     
     var body: some View {
-        VStack {
-            UISliderView()
-                .padding(.horizontal)
+        ZStack {
+            VStack {
+                TaskTextView(target: $target)
+
+                HStack {
+                    Text("0")
+                    UISliderView()
+                    Text("100")
+                }
+                .padding()
+                
+                CheckMeButtonView {
+                    print("Check me")
+                }
+                
+                RestartButtonView {
+                    print("Restart")
+                }
+                .padding()
+            }
         }
-        .padding()
+        
     }
 }
 

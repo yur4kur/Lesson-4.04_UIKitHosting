@@ -18,8 +18,8 @@ struct UISliderView: UIViewRepresentable {
         slider.minimumValue = 0
         slider.maximumValue = 100
         slider.value = 50
-        slider.minimumValueImage = UIImage(systemName: "minus")
-        slider.maximumValueImage = UIImage(systemName: "plus")
+//        slider.minimumValueImage = UIImage(systemName: "minus")
+//        slider.maximumValueImage = UIImage(systemName: "plus")
         slider.thumbTintColor = .red
         return slider
     }
