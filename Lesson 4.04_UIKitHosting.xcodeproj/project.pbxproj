@@ -16,6 +16,7 @@
 		6AB1441B2B330394006DCCB3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB1441A2B330394006DCCB3 /* Constants.swift */; };
 		6AB1441D2B33060B006DCCB3 /* CheckMeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB1441C2B33060B006DCCB3 /* CheckMeButtonView.swift */; };
 		6AB1441F2B33076D006DCCB3 /* RestartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB1441E2B33076D006DCCB3 /* RestartButtonView.swift */; };
+		6AB144222B330F02006DCCB3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB144212B330F02006DCCB3 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		6AB1441A2B330394006DCCB3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6AB1441C2B33060B006DCCB3 /* CheckMeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMeButtonView.swift; sourceTree = "<group>"; };
 		6AB1441E2B33076D006DCCB3 /* RestartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartButtonView.swift; sourceTree = "<group>"; };
+		6AB144212B330F02006DCCB3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,18 +99,19 @@
 		6AB144122B32E115006DCCB3 /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
-				6AB144132B32E127006DCCB3 /* Views */,
+				6AB144202B330E5B006DCCB3 /* MainViewModel */,
+				6AB144132B32E127006DCCB3 /* MainViews */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
 		};
-		6AB144132B32E127006DCCB3 /* Views */ = {
+		6AB144132B32E127006DCCB3 /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
 				6AB144042B32E0B1006DCCB3 /* MainView.swift */,
 				6AB144142B32E14F006DCCB3 /* Elements */,
 			);
-			path = Views;
+			path = MainViews;
 			sourceTree = "<group>";
 		};
 		6AB144142B32E14F006DCCB3 /* Elements */ = {
@@ -128,6 +131,14 @@
 				6AB1441A2B330394006DCCB3 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		6AB144202B330E5B006DCCB3 /* MainViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6AB144212B330F02006DCCB3 /* MainViewModel.swift */,
+			);
+			path = MainViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 				6AB1441B2B330394006DCCB3 /* Constants.swift in Sources */,
 				6AB1441F2B33076D006DCCB3 /* RestartButtonView.swift in Sources */,
 				6AB144162B32E1AC006DCCB3 /* UISliderView.swift in Sources */,
+				6AB144222B330F02006DCCB3 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

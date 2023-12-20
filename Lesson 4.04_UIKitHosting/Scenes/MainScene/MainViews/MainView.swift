@@ -13,24 +13,23 @@ struct MainView: View {
     
     // MARK:  - Wrapped properties
     
-    @State private var target = 97
-    @State private var showAlert = false
+    @StateObject private var mainViewModel = MainViewModel()
     
     // MARK: - Body
     
     var body: some View {
         ZStack {
             VStack {
-                TaskTextView(target: $target)
+                TaskTextView(target: $mainViewModel.target)
 
                 HStack {
-                    Text("0")
+                    Text(Constants.minSliderValue)
                     UISliderView()
-                    Text("100")
+                    Text(Constants.maxSliderValue)
                 }
                 .padding()
                 
-                CheckMeButtonView(showAlert: $showAlert) 
+                CheckMeButtonView(showAlert: $mainViewModel.showAlert) 
                 
                 RestartButtonView {
                     print("Restart")
