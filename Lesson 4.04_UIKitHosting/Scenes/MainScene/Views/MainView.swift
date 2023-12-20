@@ -11,7 +11,10 @@ import SwiftUI
 
 struct MainView: View {
     
+    // MARK:  - Wrapped properties
+    
     @State private var target = 97
+    @State private var showAlert = false
     
     // MARK: - Body
     
@@ -27,9 +30,7 @@ struct MainView: View {
                 }
                 .padding()
                 
-                CheckMeButtonView {
-                    print("Check me")
-                }
+                CheckMeButtonView(showAlert: $showAlert) 
                 
                 RestartButtonView {
                     print("Restart")

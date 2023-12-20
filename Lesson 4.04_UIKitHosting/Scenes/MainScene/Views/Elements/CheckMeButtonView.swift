@@ -11,19 +11,25 @@ import SwiftUI
 
 struct CheckMeButtonView: View {
     
-    // MARK: - Public properties
+    // MARK: - Wrapped properties
     
-    let action: () -> Void
+    @Binding var showAlert: Bool
     
+     
     // MARK: - Body
     
     var body: some View {
-        Button(Constants.checkMeTitle, action: action)
+        Button(Constants.checkMeTitle) {
+            showAlert = true
+        }
+            .alert(Constants.alertMessage, isPresented: $showAlert) {
+                Button(Constants.oKTitle, role: .cancel) {}
+            }
     }
 }
 
 // MARK: - Preview
 
 #Preview {
-    CheckMeButtonView(action: {})
+    CheckMeButtonView(showAlert: .constant(true))
 }
