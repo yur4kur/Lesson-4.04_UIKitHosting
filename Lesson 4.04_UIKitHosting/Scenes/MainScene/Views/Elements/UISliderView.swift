@@ -14,7 +14,14 @@ struct UISliderView: UIViewRepresentable {
     // MARK: - View settings methods
     
     func makeUIView(context: Context) -> UISlider {
-        return UISlider()
+        let slider = UISlider()
+        slider.minimumValue = 0
+        slider.maximumValue = 100
+        slider.value = 50
+        slider.minimumValueImage = UIImage(systemName: "minus")
+        slider.maximumValueImage = UIImage(systemName: "plus")
+        slider.thumbTintColor = .red
+        return slider
     }
     
     func updateUIView(_ uiView: UISlider, context: Context) {
