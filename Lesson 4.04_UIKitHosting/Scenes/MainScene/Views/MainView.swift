@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  Lesson 4.04_UIKitHosting
 //
 //  Created by Юрий Куринной on 20.12.2023.
@@ -7,7 +7,13 @@
 
 import SwiftUI
 
-struct ContentView: View {
+// MARK: - MainView
+
+struct MainView: View {
+    
+    
+    // MARK: - Body
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,6 +25,8 @@ struct ContentView: View {
     }
 }
 
+// MARK: - Preview
+
 #Preview {
-    ContentView()
+    MainView()
 }

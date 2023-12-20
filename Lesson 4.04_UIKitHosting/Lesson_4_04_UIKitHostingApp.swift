@@ -11,7 +11,7 @@ import SwiftUI
 struct Lesson_4_04_UIKitHostingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
