@@ -11,6 +11,10 @@ import SwiftUI
 
 struct UISliderView: UIViewRepresentable {
     
+    // MARK: - Wrapped properties
+    @Binding var currentValue: Float
+    
+    
     // MARK: - View settings methods
     
     func makeUIView(context: Context) -> UISlider {
@@ -23,13 +27,33 @@ struct UISliderView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UISlider, context: Context) {
-        ///
+        uiView.value = currentValue
     }
     
+    func makeCoordinator() -> Coordinator {
+        Coordinator(currentValue: $currentValue)
+    }
+}
+
+// MARK: - Extensions
+
+// MARK: Coordinator
+
+extension UISliderView {
+    class Coordinator: NSObject {
+        
+        // MARK: Wrapped properties
+        @Binding var currentValue: Float
+        
+        // MARK: Initializers
+        init(currentValue: Binding<Float>) {
+            self._currentValue = currentValue
+        }
+    }
 }
 
 // MARK: - Preview
 
 #Preview {
-    UISliderView()
+    UISliderView(currentValue: .constant(36))
 }

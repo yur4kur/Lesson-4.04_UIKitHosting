@@ -17,6 +17,9 @@
 		6AB1441D2B33060B006DCCB3 /* CheckMeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB1441C2B33060B006DCCB3 /* CheckMeButtonView.swift */; };
 		6AB1441F2B33076D006DCCB3 /* RestartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB1441E2B33076D006DCCB3 /* RestartButtonView.swift */; };
 		6AB144222B330F02006DCCB3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB144212B330F02006DCCB3 /* MainViewModel.swift */; };
+		6AB144252B3312ED006DCCB3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB144242B3312ED006DCCB3 /* Game.swift */; };
+		6AB144272B331860006DCCB3 /* AlertTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB144262B331860006DCCB3 /* AlertTextView.swift */; };
+		6AB1442A2B3348F7006DCCB3 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB144292B3348F7006DCCB3 /* GameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		6AB1441C2B33060B006DCCB3 /* CheckMeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMeButtonView.swift; sourceTree = "<group>"; };
 		6AB1441E2B33076D006DCCB3 /* RestartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartButtonView.swift; sourceTree = "<group>"; };
 		6AB144212B330F02006DCCB3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		6AB144242B3312ED006DCCB3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		6AB144262B331860006DCCB3 /* AlertTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTextView.swift; sourceTree = "<group>"; };
+		6AB144292B3348F7006DCCB3 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +70,9 @@
 			isa = PBXGroup;
 			children = (
 				6AB144022B32E0B1006DCCB3 /* Lesson_4_04_UIKitHostingApp.swift */,
+				6AB144232B3312D3006DCCB3 /* Models */,
 				6AB144112B32E10B006DCCB3 /* Scenes */,
+				6AB144282B3348DF006DCCB3 /* Utilities */,
 				6AB144192B33033F006DCCB3 /* Constants */,
 				6AB144102B32E0F9006DCCB3 /* Resources */,
 				6AB144082B32E0B2006DCCB3 /* Preview Content */,
@@ -109,20 +117,21 @@
 			isa = PBXGroup;
 			children = (
 				6AB144042B32E0B1006DCCB3 /* MainView.swift */,
-				6AB144142B32E14F006DCCB3 /* Elements */,
+				6AB144142B32E14F006DCCB3 /* MainViewElements */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
 		};
-		6AB144142B32E14F006DCCB3 /* Elements */ = {
+		6AB144142B32E14F006DCCB3 /* MainViewElements */ = {
 			isa = PBXGroup;
 			children = (
 				6AB144152B32E1AC006DCCB3 /* UISliderView.swift */,
 				6AB144172B330276006DCCB3 /* TaskTextView.swift */,
 				6AB1441C2B33060B006DCCB3 /* CheckMeButtonView.swift */,
 				6AB1441E2B33076D006DCCB3 /* RestartButtonView.swift */,
+				6AB144262B331860006DCCB3 /* AlertTextView.swift */,
 			);
-			path = Elements;
+			path = MainViewElements;
 			sourceTree = "<group>";
 		};
 		6AB144192B33033F006DCCB3 /* Constants */ = {
@@ -139,6 +148,22 @@
 				6AB144212B330F02006DCCB3 /* MainViewModel.swift */,
 			);
 			path = MainViewModel;
+			sourceTree = "<group>";
+		};
+		6AB144232B3312D3006DCCB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6AB144242B3312ED006DCCB3 /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6AB144282B3348DF006DCCB3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6AB144292B3348F7006DCCB3 /* GameManager.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AB144182B330276006DCCB3 /* TaskTextView.swift in Sources */,
+				6AB144252B3312ED006DCCB3 /* Game.swift in Sources */,
 				6AB144052B32E0B1006DCCB3 /* MainView.swift in Sources */,
+				6AB1442A2B3348F7006DCCB3 /* GameManager.swift in Sources */,
 				6AB144032B32E0B1006DCCB3 /* Lesson_4_04_UIKitHostingApp.swift in Sources */,
+				6AB144272B331860006DCCB3 /* AlertTextView.swift in Sources */,
 				6AB1441D2B33060B006DCCB3 /* CheckMeButtonView.swift in Sources */,
 				6AB1441B2B330394006DCCB3 /* Constants.swift in Sources */,
 				6AB1441F2B33076D006DCCB3 /* RestartButtonView.swift in Sources */,

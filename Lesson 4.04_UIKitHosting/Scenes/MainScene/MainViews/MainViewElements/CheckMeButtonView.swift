@@ -14,7 +14,7 @@ struct CheckMeButtonView: View {
     // MARK: - Wrapped properties
     
     @Binding var showAlert: Bool
-    
+    @Binding var score: Int
      
     // MARK: - Body
     
@@ -22,14 +22,20 @@ struct CheckMeButtonView: View {
         Button(Constants.checkMeTitle) {
             showAlert = true
         }
-            .alert(Constants.alertMessage, isPresented: $showAlert) {
-                Button(Constants.oKTitle, role: .cancel) {}
-            }
+        .alert("", isPresented: $showAlert) {
+            Button(Constants.oKTitle, role: .cancel) {}
+        } message: {
+            AlertTextView(score: $score)
+        }
+
+//            .alert(Constants.alertMessage, isPresented: $showAlert) {
+//                Button(Constants.oKTitle, role: .cancel) {}
+//            }
     }
 }
 
 // MARK: - Preview
 
 #Preview {
-    CheckMeButtonView(showAlert: .constant(true))
+    CheckMeButtonView(showAlert: .constant(true), score: .constant(75))
 }
