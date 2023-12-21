@@ -28,7 +28,7 @@ struct CheckMeButtonView: View {
             action()
         }
         .alert(Constants.nilString, isPresented: $showAlert) {
-            Button(Constants.oKTitle, role: .cancel) {}
+            Button(Constants.okTitle, role: .cancel) {}
         } message: {
             AlertTextView(score: $score)
         }

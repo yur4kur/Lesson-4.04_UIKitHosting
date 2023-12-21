@@ -16,7 +16,7 @@ enum Constants {
     
     /// CheckMeButtonView
     static let checkMeTitle = "Проверь меня!"
-    static let oKTitle = "OK"
+    static let okTitle = "OK"
     static let nilString = ""
     
     /// AlertTextView

@@ -13,15 +13,27 @@ final class MainViewModel: ObservableObject {
     
     // MARK:  - Wrapped properties
     
-   @Published var targetValue = Int.random(in: 1...100)
-    @Published var currentValue: Float = 20
+    @Published var targetValue: Int
+    @Published var currentValue: Float
+    @Published var score: Int
     @Published var showAlert = false
-    @Published var score = 0
+    
+    // MARK: - Private properties
+    
+    private let game = Game()
     
     // MARK: - Public propeties
     
     var opacity: Float {
         Float(currentValue / Float(targetValue))
+    }
+    
+    // MARK: - Initializers
+    
+    init() {
+        self.targetValue = game.targetValue
+        self.currentValue = game.currentValue
+        self.score = game.score
     }
     
     // MARK: - Public methods
@@ -37,7 +49,7 @@ final class MainViewModel: ObservableObject {
     }
     
     // MARK: - Private methods
- 
+    
     private func computeScore() -> Int {
         let difference = abs(targetValue - lround(Double(currentValue)))
         return 100 - difference

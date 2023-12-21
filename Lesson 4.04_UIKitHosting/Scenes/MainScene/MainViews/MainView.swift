@@ -27,7 +27,8 @@ struct MainView: View {
                     
                     UISliderView(
                         currentValue: $mainViewModel.currentValue,
-                        opacity: mainViewModel.opacity)
+                        opacity: mainViewModel.opacity
+                    )
                         
                     Text(Constants.maxSliderValue)
                 }

@@ -23,6 +23,7 @@ struct RestartButtonView: View {
 }
 
 // MARK: - Preview
+
 #Preview {
     RestartButtonView(action: {})
 }
