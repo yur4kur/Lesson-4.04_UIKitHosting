@@ -15,12 +15,14 @@ struct CheckMeButtonView: View {
     
     @Binding var showAlert: Bool
     @Binding var score: Int
+    let action: () -> Void
      
     // MARK: - Body
     
     var body: some View {
         Button(Constants.checkMeTitle) {
             showAlert = true
+            action()
         }
         .alert("", isPresented: $showAlert) {
             Button(Constants.oKTitle, role: .cancel) {}
@@ -37,5 +39,5 @@ struct CheckMeButtonView: View {
 // MARK: - Preview
 
 #Preview {
-    CheckMeButtonView(showAlert: .constant(true), score: .constant(75))
+    CheckMeButtonView(showAlert: .constant(true), score: .constant(75), action: {})
 }

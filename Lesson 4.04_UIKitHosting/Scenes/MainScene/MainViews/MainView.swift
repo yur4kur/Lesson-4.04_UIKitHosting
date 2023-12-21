@@ -14,7 +14,7 @@ struct MainView: View {
     // MARK:  - Wrapped properties
     
     @StateObject private var mainViewModel = MainViewModel()
-    @State private var score = 92
+    
     
     // MARK: - Body
     
@@ -26,11 +26,15 @@ struct MainView: View {
                 HStack {
                     Text(Constants.minSliderValue)
                     UISliderView(currentValue: $mainViewModel.currentValue)
+                        
                     Text(Constants.maxSliderValue)
                 }
                 .padding()
                 
-                CheckMeButtonView(showAlert: $mainViewModel.showAlert, score: $score) 
+                CheckMeButtonView(
+                    showAlert: $mainViewModel.showAlert,
+                    score: $mainViewModel.score,
+                    action: mainViewModel.getScore)
                 
                 RestartButtonView {
                     mainViewModel.restart()

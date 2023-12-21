@@ -16,13 +16,14 @@ final class MainViewModel: ObservableObject {
     @Published var targetValue = Game().targetValue
     @Published var currentValue: Float = 33.2
     @Published var showAlert = false
+    @Published var score = 0
     
-    //var score: Int
     
     // MARK: - Public methods
     
     func getScore() {
-        
+        let score = computeScore()
+        self.score = score
     }
     
     func restart() {

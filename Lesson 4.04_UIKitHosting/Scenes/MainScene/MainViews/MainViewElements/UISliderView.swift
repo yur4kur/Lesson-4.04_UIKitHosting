@@ -23,6 +23,11 @@ struct UISliderView: UIViewRepresentable {
         slider.maximumValue = 100
         slider.value = 50
         slider.thumbTintColor = .red
+        slider.addTarget(
+            context.coordinator,
+            action: #selector(Coordinator.didEndMove),
+            for: .valueChanged
+        )
         return slider
     }
     
@@ -48,6 +53,11 @@ extension UISliderView {
         // MARK: Initializers
         init(currentValue: Binding<Float>) {
             self._currentValue = currentValue
+        }
+        
+        // MARK: Public methods
+        @objc func didEndMove(_ sender: UISlider) {
+            currentValue = sender.value
         }
     }
 }
