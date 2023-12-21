@@ -14,6 +14,7 @@ struct UISliderView: UIViewRepresentable {
     // MARK: - Wrapped properties
     
     @Binding var currentValue: Float
+    var opacity: Float
     
     // MARK: - Public methods
     
@@ -22,7 +23,12 @@ struct UISliderView: UIViewRepresentable {
         slider.minimumValue = 0
         slider.maximumValue = 100
         slider.value = 50
-        slider.thumbTintColor = .red
+        slider.thumbTintColor = UIColor(
+            red: 1,
+            green: 0,
+            blue: 0,
+            alpha: CGFloat(opacity)
+        )
         slider.addTarget(
             context.coordinator,
             action: #selector(Coordinator.didEndMove),
@@ -33,6 +39,12 @@ struct UISliderView: UIViewRepresentable {
     
     func updateUIView(_ uiView: UISlider, context: Context) {
         uiView.value = currentValue
+        uiView.thumbTintColor = UIColor(
+            red: 1,
+            green: 0,
+            blue: 0,
+            alpha: CGFloat(opacity)
+        )
     }
     
     func makeCoordinator() -> Coordinator {
@@ -42,9 +54,10 @@ struct UISliderView: UIViewRepresentable {
 
 // MARK: - Extensions
 
-// MARK: Coordinator
-
 extension UISliderView {
+    
+    // MARK: Coordinator
+    
     class Coordinator: NSObject {
         
         // MARK: Wrapped properties
@@ -65,5 +78,5 @@ extension UISliderView {
 // MARK: - Preview
 
 #Preview {
-    UISliderView(currentValue: .constant(36))
+    UISliderView(currentValue: .constant(36), opacity: 0.36)
 }

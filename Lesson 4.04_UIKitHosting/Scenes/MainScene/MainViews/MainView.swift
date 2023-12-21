@@ -25,7 +25,9 @@ struct MainView: View {
                 HStack {
                     Text(Constants.minSliderValue)
                     
-                    UISliderView(currentValue: $mainViewModel.currentValue)
+                    UISliderView(
+                        currentValue: $mainViewModel.currentValue,
+                        opacity: mainViewModel.opacity)
                         
                     Text(Constants.maxSliderValue)
                 }
