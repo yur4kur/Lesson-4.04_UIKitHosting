@@ -23,7 +23,7 @@ struct UISliderView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> UISlider {
         let slider = UISlider()
-        slider.minimumValue = 1
+        slider.minimumValue = 0
         slider.maximumValue = 100
         slider.value = 50
         slider.thumbTintColor = UIColor(

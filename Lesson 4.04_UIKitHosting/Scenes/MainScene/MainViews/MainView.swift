@@ -37,7 +37,8 @@ struct MainView: View {
                 CheckMeButtonView(
                     showAlert: $mainViewModel.showAlert,
                     score: $mainViewModel.score,
-                    action: mainViewModel.getScore)
+                    action: mainViewModel.getScore
+                )
                 
                 RestartButtonView {
                     mainViewModel.restart()

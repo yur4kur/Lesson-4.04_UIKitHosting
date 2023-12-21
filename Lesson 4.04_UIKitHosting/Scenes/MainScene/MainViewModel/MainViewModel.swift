@@ -25,7 +25,7 @@ final class MainViewModel: ObservableObject {
     // MARK: - Public propeties
     
     var opacity: Float {
-        Float(currentValue / Float(targetValue))
+        computeScore() / 100
     }
     
     // MARK: - Initializers
@@ -39,19 +39,19 @@ final class MainViewModel: ObservableObject {
     // MARK: - Public methods
     
     func getScore() {
-        let score = computeScore()
+        let score = Int(computeScore())
         self.score = score
     }
     
     func restart() {
-        targetValue = Int.random(in: 1...100)
-        currentValue = 50
+        targetValue = Int.random(in: 0...100)
+        currentValue = Float.random(in: 0...100)
     }
     
     // MARK: - Private methods
     
-    private func computeScore() -> Int {
-        let difference = abs(targetValue - lround(Double(currentValue)))
+    private func computeScore() -> Float {
+        let difference = abs(Float(targetValue) - currentValue)
         return 100 - difference
     }
 }

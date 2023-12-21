@@ -19,7 +19,7 @@ struct Game {
     
     init() {
         targetValue = Int.random(in: 0...100)
-        currentValue = 30
+        currentValue = Float.random(in: 0...100)
         score = 0
     }
 }
