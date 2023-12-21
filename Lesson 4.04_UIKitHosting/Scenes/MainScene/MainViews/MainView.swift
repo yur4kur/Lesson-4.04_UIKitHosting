@@ -20,9 +20,14 @@ struct MainView: View {
     var body: some View {
         ZStack {
             VStack {
+                
+                // MARK: Task Text
                 TaskTextView(target: $mainViewModel.targetValue)
 
+                
                 HStack {
+                    
+                    // MARK: Slider group
                     Text(Constants.minSliderValue)
                     
                     UISliderView(
@@ -34,10 +39,10 @@ struct MainView: View {
                 }
                 .padding()
                 
+                // MARK: Buttons group
                 CheckMeButtonView(
                     showAlert: $mainViewModel.showAlert,
-                    score: $mainViewModel.score,
-                    action: mainViewModel.getScore
+                    score: mainViewModel.score
                 )
                 
                 RestartButtonView {

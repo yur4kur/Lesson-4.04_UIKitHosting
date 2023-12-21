@@ -13,13 +13,11 @@ struct Game {
     
     let targetValue: Int
     let currentValue: Float
-    let score: Int
     
     // MARK: - Initializers
     
     init() {
         targetValue = Int.random(in: 0...100)
         currentValue = Float.random(in: 0...100)
-        score = 0
     }
 }

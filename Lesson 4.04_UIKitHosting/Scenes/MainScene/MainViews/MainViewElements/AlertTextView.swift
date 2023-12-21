@@ -13,7 +13,7 @@ struct AlertTextView: View {
     
     // MARK: - Wrapped Properties
     
-    @Binding var score: Int
+    var score: Int
     
     // MARK:  - Body
     var body: some View {
@@ -24,5 +24,5 @@ struct AlertTextView: View {
 // MARK: - Preview
 
 #Preview {
-    AlertTextView(score: .constant(52))
+    AlertTextView(score: 52)
 }

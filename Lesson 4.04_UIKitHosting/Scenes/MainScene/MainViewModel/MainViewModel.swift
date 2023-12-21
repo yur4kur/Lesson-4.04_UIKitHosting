@@ -15,12 +15,11 @@ final class MainViewModel: ObservableObject {
     
     @Published var targetValue: Int
     @Published var currentValue: Float
-    @Published var score: Int
     @Published var showAlert = false
     
     // MARK: - Private properties
     
-    private let game = Game()
+    private var game = Game()
     
     // MARK: - Public propeties
     
@@ -28,20 +27,18 @@ final class MainViewModel: ObservableObject {
         computeScore() / 100
     }
     
+    var score: Int {
+        Int(computeScore())
+    }
+    
     // MARK: - Initializers
     
     init() {
         self.targetValue = game.targetValue
         self.currentValue = game.currentValue
-        self.score = game.score
     }
     
     // MARK: - Public methods
-    
-    func getScore() {
-        let score = Int(computeScore())
-        self.score = score
-    }
     
     func restart() {
         targetValue = Int.random(in: 0...100)
