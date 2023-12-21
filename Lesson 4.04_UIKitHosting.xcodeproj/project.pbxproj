@@ -104,19 +104,11 @@
 		6AB144122B32E115006DCCB3 /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
-				6AB144202B330E5B006DCCB3 /* MainViewModel */,
-				6AB144132B32E127006DCCB3 /* MainViews */,
-			);
-			path = MainScene;
-			sourceTree = "<group>";
-		};
-		6AB144132B32E127006DCCB3 /* MainViews */ = {
-			isa = PBXGroup;
-			children = (
+				6AB144212B330F02006DCCB3 /* MainViewModel.swift */,
 				6AB144042B32E0B1006DCCB3 /* MainView.swift */,
 				6AB144142B32E14F006DCCB3 /* MainViewElements */,
 			);
-			path = MainViews;
+			path = MainScene;
 			sourceTree = "<group>";
 		};
 		6AB144142B32E14F006DCCB3 /* MainViewElements */ = {
@@ -137,14 +129,6 @@
 				6AB1441A2B330394006DCCB3 /* Constants.swift */,
 			);
 			path = Constants;
-			sourceTree = "<group>";
-		};
-		6AB144202B330E5B006DCCB3 /* MainViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				6AB144212B330F02006DCCB3 /* MainViewModel.swift */,
-			);
-			path = MainViewModel;
 			sourceTree = "<group>";
 		};
 		6AB144232B3312D3006DCCB3 /* Models */ = {
