@@ -15,7 +15,6 @@ struct MainView: View {
     
     @StateObject private var mainViewModel = MainViewModel()
     
-    
     // MARK: - Body
     
     var body: some View {
@@ -25,6 +24,7 @@ struct MainView: View {
 
                 HStack {
                     Text(Constants.minSliderValue)
+                    
                     UISliderView(currentValue: $mainViewModel.currentValue)
                         
                     Text(Constants.maxSliderValue)
@@ -42,7 +42,6 @@ struct MainView: View {
                 .padding()
             }
         }
-        
     }
 }
 

@@ -12,10 +12,10 @@ import SwiftUI
 struct UISliderView: UIViewRepresentable {
     
     // MARK: - Wrapped properties
+    
     @Binding var currentValue: Float
     
-    
-    // MARK: - View settings methods
+    // MARK: - Public methods
     
     func makeUIView(context: Context) -> UISlider {
         let slider = UISlider()

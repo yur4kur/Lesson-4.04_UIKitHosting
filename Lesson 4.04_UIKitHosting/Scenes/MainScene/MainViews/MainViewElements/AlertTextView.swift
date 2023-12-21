@@ -7,14 +7,21 @@
 
 import SwiftUI
 
+// MARK: AlertTextView
+
 struct AlertTextView: View {
+    
+    // MARK: - Wrapped Properties
     
     @Binding var score: Int
     
+    // MARK:  - Body
     var body: some View {
         Text(Constants.alertMessage + String(score))
     }
 }
+
+// MARK: - Preview
 
 #Preview {
     AlertTextView(score: .constant(52))

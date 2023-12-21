@@ -11,12 +11,15 @@ import SwiftUI
 
 struct CheckMeButtonView: View {
     
-    // MARK: - Wrapped properties
+    // MARK: - Wrapped Properties
     
     @Binding var showAlert: Bool
     @Binding var score: Int
+    
+    // MARK: - Public propeties
+    
     let action: () -> Void
-     
+    
     // MARK: - Body
     
     var body: some View {
@@ -24,20 +27,19 @@ struct CheckMeButtonView: View {
             showAlert = true
             action()
         }
-        .alert("", isPresented: $showAlert) {
+        .alert(Constants.nilString, isPresented: $showAlert) {
             Button(Constants.oKTitle, role: .cancel) {}
         } message: {
             AlertTextView(score: $score)
         }
-
-//            .alert(Constants.alertMessage, isPresented: $showAlert) {
-//                Button(Constants.oKTitle, role: .cancel) {}
-//            }
     }
 }
 
 // MARK: - Preview
 
 #Preview {
-    CheckMeButtonView(showAlert: .constant(true), score: .constant(75), action: {})
+    CheckMeButtonView(
+        showAlert: .constant(true),
+        score: .constant(75),
+        action: {})
 }

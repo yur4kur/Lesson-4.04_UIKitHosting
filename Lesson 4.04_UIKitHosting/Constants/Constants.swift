@@ -6,11 +6,22 @@
 //
 
 enum Constants {
+    
+    /// UISliderView
     static let minSliderValue = "0"
     static let maxSliderValue = "100"
+    
+    /// TaskTextView
     static let taskText = "Подвиньте слайдер как можно ближе к: "
+    
+    /// CheckMeButtonView
     static let checkMeTitle = "Проверь меня!"
-    static let restartTitle = "Начать заново"
-    static let alertMessage = "Ваш результат: "
     static let oKTitle = "OK"
+    static let nilString = ""
+    
+    /// AlertTextView
+    static let alertMessage = "Ваш результат: "
+    
+    /// RestartButtonView
+    static let restartTitle = "Начать заново" 
 }

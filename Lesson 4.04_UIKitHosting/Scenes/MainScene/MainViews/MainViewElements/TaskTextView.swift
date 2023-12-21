@@ -15,7 +15,6 @@ struct TaskTextView: View {
     
     @Binding var target: Int
     
-    
     // MARK: - Body
     
     var body: some View {

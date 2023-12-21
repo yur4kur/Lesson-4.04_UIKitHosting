@@ -8,7 +8,10 @@
 import SwiftUI
 
 // MARK: - RestartButtonView
+
 struct RestartButtonView: View {
+    
+    // MARK: - Public properties
     
     let action: () -> Void
     

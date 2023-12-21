@@ -122,11 +122,11 @@
 		6AB144142B32E14F006DCCB3 /* MainViewElements */ = {
 			isa = PBXGroup;
 			children = (
-				6AB144152B32E1AC006DCCB3 /* UISliderView.swift */,
 				6AB144172B330276006DCCB3 /* TaskTextView.swift */,
+				6AB144152B32E1AC006DCCB3 /* UISliderView.swift */,
 				6AB1441C2B33060B006DCCB3 /* CheckMeButtonView.swift */,
-				6AB1441E2B33076D006DCCB3 /* RestartButtonView.swift */,
 				6AB144262B331860006DCCB3 /* AlertTextView.swift */,
+				6AB1441E2B33076D006DCCB3 /* RestartButtonView.swift */,
 			);
 			path = MainViewElements;
 			sourceTree = "<group>";

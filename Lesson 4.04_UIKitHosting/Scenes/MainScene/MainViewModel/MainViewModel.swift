@@ -14,7 +14,7 @@ final class MainViewModel: ObservableObject {
     // MARK:  - Wrapped properties
     
     @Published var targetValue = Game().targetValue
-    @Published var currentValue: Float = 33.2
+    @Published var currentValue: Float = 50
     @Published var showAlert = false
     @Published var score = 0
     
@@ -37,8 +37,5 @@ final class MainViewModel: ObservableObject {
         let difference = abs(targetValue - lround(Double(currentValue)))
         return 100 - difference
     }
-//    argetValue — целевое значение
-//    currentValue — текущее значение слайдера
-//    }
 }
 
