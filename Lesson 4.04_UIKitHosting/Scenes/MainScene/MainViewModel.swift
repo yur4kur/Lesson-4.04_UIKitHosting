@@ -12,8 +12,7 @@ import SwiftUI
 final class MainViewModel: ObservableObject {
     
     // MARK:  - Wrapped properties
-    
-    @Published var targetValue: Int
+
     @Published var currentValue: Float
     @Published var showAlert = false
     
@@ -22,6 +21,8 @@ final class MainViewModel: ObservableObject {
     private var game = Game()
     
     // MARK: - Public propeties
+    
+    var targetValue: Int
     
     var opacity: Float {
         computeScore() / 100

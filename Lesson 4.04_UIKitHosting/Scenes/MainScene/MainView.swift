@@ -22,7 +22,7 @@ struct MainView: View {
             VStack {
                 
                 // MARK: Task Text
-                TaskTextView(target: $mainViewModel.targetValue)
+                TaskTextView(target: mainViewModel.targetValue)
 
                 HStack {
                     

@@ -13,7 +13,7 @@ struct TaskTextView: View {
     
     // MARK: - Wrapped properties
     
-    @Binding var target: Int
+   var target: Int
     
     // MARK: - Body
     
@@ -25,5 +25,5 @@ struct TaskTextView: View {
 // MARK: - Preview
 
 #Preview {
-    TaskTextView(target: .constant(97))
+    TaskTextView(target: 97)
 }
