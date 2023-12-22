@@ -24,32 +24,23 @@ struct UISliderView: UIViewRepresentable {
     // MARK: Setup View
     func makeUIView(context: Context) -> UISlider {
         let slider = UISlider()
+        
         slider.minimumValue = 0
         slider.maximumValue = 100
-        slider.value = 50
-        slider.thumbTintColor = UIColor(
-            red: 1,
-            green: 0,
-            blue: 0,
-            alpha: CGFloat(opacity)
-        )
+        
         slider.addTarget(
             context.coordinator,
             action: #selector(Coordinator.didEndMove),
             for: .valueChanged
         )
+        
         return slider
     }
     
     // MARK: Update View
     func updateUIView(_ uiView: UISlider, context: Context) {
         uiView.value = currentValue
-        uiView.thumbTintColor = UIColor(
-            red: 1,
-            green: 0,
-            blue: 0,
-            alpha: CGFloat(opacity)
-        )
+        uiView.thumbTintColor = .red.withAlphaComponent(CGFloat(opacity))
     }
     
     func makeCoordinator() -> Coordinator {

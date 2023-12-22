@@ -24,7 +24,6 @@ struct MainView: View {
                 // MARK: Task Text
                 TaskTextView(target: $mainViewModel.targetValue)
 
-                
                 HStack {
                     
                     // MARK: Slider group
