@@ -22,7 +22,7 @@ struct MainView: View {
             VStack {
                 
                 // MARK: Task Text
-                TaskTextView(target: mainViewModel.targetValue)
+                TaskTextView(target: mainViewModel.game.targetValue)
 
                 HStack {
                     
@@ -30,7 +30,7 @@ struct MainView: View {
                     Text(Constants.minSliderValue)
                     
                     UISliderView(
-                        currentValue: $mainViewModel.currentValue,
+                        currentValue: $mainViewModel.game.currentValue,
                         opacity: mainViewModel.opacity
                     )
                         

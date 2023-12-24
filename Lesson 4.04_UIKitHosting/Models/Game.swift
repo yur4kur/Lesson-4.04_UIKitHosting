@@ -11,13 +11,6 @@ struct Game {
     
     // MARK: - Public properties
     
-    let targetValue: Int
-    let currentValue: Float
-    
-    // MARK: - Initializers
-    
-    init() {
-        targetValue = Int.random(in: 0...100)
-        currentValue = Float.random(in: 0...100)
-    }
+    var targetValue = Int.random(in: 0...100)
+    var currentValue = Float.random(in: 0...100)
 }
