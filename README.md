@@ -3,7 +3,7 @@
 ![Simulator Screenshot - iPhone 15 Pro - 2023-12-22 at 15 47 22](https://github.com/yur4kur/Lesson-4.04_UIKitHosting/assets/105720427/b4ff7f21-832c-423b-a922-991f19902106)
 
 # Lesson-4.04_UIKitHosting
-## A small game app for practicing hosting of elements between SwiftUI & UIKit
+## A small game app to practice hosting of elements between SwiftUI & UIKit
 ### The aim of the game is to move the slider with the maximium precision to the target value stated in the task. 
 ### The slider changes its opacity depending on the difference between target & current values.
 
